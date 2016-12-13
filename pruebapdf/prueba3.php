@@ -2,6 +2,41 @@
 <html>
 <head>
 	<title>Biblioteca ILSA - Busqueda</title>
+	<style type="text/css">
+          p {
+	            font-family: sans-serif, Arial, Helvetica;
+							font-weight: bold;
+	            color: #476475;
+            }
+						.styled-select {
+						   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+						   height: 29px;
+						   overflow: hidden;
+						   width: 640px;
+						}
+
+						.styled-select select {
+						   background: transparent;
+						   border: none;
+						   font-size: 14px;
+						   height: 29px;
+						   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+						   width: 696px;
+						}
+					.styled-select.slate {
+					   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+					   height: 34px;
+					   width: 640px;
+					}
+
+					.styled-select.slate select {
+					   border: 1px solid #ccc;
+					   font-size: 16px;
+					   height: 34px;
+					   width: 696px;
+					}
+  </style>
+
 	<!--Se carga http://code.jquery.com/ una version de jquery del servidor mas proximo a mi IP -->
 	<script
 	  src="http://code.jquery.com/jquery-3.1.1.min.js"
@@ -9,6 +44,7 @@
 	  crossorigin="anonymous">
 	</script>
 
+<div class="styled-select slate">
 			<select id="misarchivos">
 				<?php
 					$archivos = scandir("/home/asus/Escritorio/www/pdf"); //Se carga la ruta del enlace simbolico
@@ -17,7 +53,7 @@
 						}
 				?>
 			</select>
-
+</div>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="/resources/demos/style.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
